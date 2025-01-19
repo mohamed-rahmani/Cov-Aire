@@ -1,10 +1,10 @@
-package com.covaire.backend;
+package com.covaire.api_rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendApplicationTests {
+class ApiRestApplicationTests {
 
 	@Test
 	void contextLoads() {

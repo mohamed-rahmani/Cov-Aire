@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.covaire</groupId>
-	<artifactId>backend</artifactId>
+	<artifactId>api-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend</name>
+	<name>api-rest</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
