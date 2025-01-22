@@ -28,4 +28,10 @@ public class CarpoolingAreaService {
                 .distinct()
                 .collect(Collectors.toList());
     }
+
+    public List<CarpoolingArea>  getAllCarpoolingAreasByRegion(String region) {
+        return repository.findAll().stream()
+                .filter(carpoolingArea -> region.equalsIgnoreCase(carpoolingArea.getRegion()))
+                .collect(Collectors.toList());
+    }
 }
