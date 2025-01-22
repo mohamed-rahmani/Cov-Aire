@@ -33,7 +33,7 @@ public class CarpoolingAreaController {
         return service.getAllRegions();
     }
 
-    @GetMapping("/{region}")
+    @GetMapping("/region/{region}")
     public ResponseEntity<List<CarpoolingArea>> getAllCarpoolingAreasByRegion(@PathVariable String region) {
         List<String> regions = service.getAllRegions();
         
@@ -45,8 +45,25 @@ public class CarpoolingAreaController {
         }
     }
 
-    @GetMapping("/{region}/{codeDepartement}")
-    public String getAllCarpoolingAreasByCodeDepartement(@PathVariable String region, @PathVariable int codeDepartement) {
-        return "All carpooling areas by code postal " + region + " " + codeDepartement;
+    @GetMapping("/departements")
+    public List<String> getAllDepartments() {
+        return service.getAllDepartments();
+    }
+
+    @GetMapping("/departement/{department}")
+    public ResponseEntity<List<CarpoolingArea>> getAllCarpoolingAreasByDepartment(@PathVariable String department) {
+        List<String> departments = service.getAllDepartments();
+
+        if(departments.contains(department)) {
+            return new ResponseEntity<>(service.getAllCarpoolingAreasByDepartment(department), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/departements/{region}")
+    public List<String> getAllDepartmentsByRegion(@PathVariable String region) {
+        return service.getAllDepartmentsByRegion(region);
     }
 }

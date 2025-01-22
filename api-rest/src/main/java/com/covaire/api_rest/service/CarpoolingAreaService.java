@@ -5,6 +5,7 @@ import com.covaire.api_rest.repository.CarpoolingAreaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.stream.Collectors;
 import java.util.List;
 
@@ -32,6 +33,29 @@ public class CarpoolingAreaService {
     public List<CarpoolingArea>  getAllCarpoolingAreasByRegion(String region) {
         return repository.findAll().stream()
                 .filter(carpoolingArea -> region.equalsIgnoreCase(carpoolingArea.getRegion()))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getAllDepartments() {
+        return repository.findAll().stream()
+                .map(CarpoolingArea::getDepartment)
+                .distinct()
+                .sorted(Comparator.nullsLast(String::compareTo))
+                .collect(Collectors.toList());
+    }
+
+    public List<CarpoolingArea> getAllCarpoolingAreasByDepartment(String department) {
+        return repository.findAll().stream()
+                .filter(carpoolingArea -> department.equals(carpoolingArea.getDepartment()))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getAllDepartmentsByRegion(String region) {
+        return repository.findAll().stream()
+                .filter(carpoolingArea -> region.equals(carpoolingArea.getRegion()))
+                .map(CarpoolingArea::getDepartment)
+                .distinct()
+                .sorted(Comparator.nullsLast(String::compareTo))
                 .collect(Collectors.toList());
     }
 }
