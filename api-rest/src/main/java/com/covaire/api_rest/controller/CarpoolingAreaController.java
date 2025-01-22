@@ -26,6 +26,11 @@ public class CarpoolingAreaController {
         return service.getAllCarpoolingAreas();
     }
 
+    @GetMapping("/regions")
+    public List<String> getAllRegions() {
+        return service.getAllRegions();
+    }
+
     @GetMapping("/{region}")
     public String getAllCarpoolingAreasByRegion(@PathVariable String region) {
         return "All carpooling areas by region " + region;
