@@ -9,7 +9,7 @@ const navLinks = [
   },
   {
     name: "Github",
-    href: "/projects",
+    href: "https://github.com/mohamed-rahmani/CovAire",
   },
 ];
 

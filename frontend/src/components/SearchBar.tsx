@@ -36,13 +36,13 @@ const SearchBar: React.FC = () => {
   return (
     <div className="relative w-96">
       <div className="relative">
-        <Search className="absolute left-3 top-2 text-gray-400" size={18} />
+        <Search className="absolute left-3 top-2 text-[#898989]" size={18} />
         <input
           type="text"
-          placeholder="Chercher une aire de covoiturage ..."
+          placeholder="Tapez une ville, un département ..."
           value={searchTerm}
           onChange={handleInputChange}
-          className="w-full pl-10 pt-1 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black shadow-sm"
+          className="w-full pl-10 pt-[0.40rem] py-1 border placeholder:text-[#898989] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black shadow-sm"
         />
       </div>
 
