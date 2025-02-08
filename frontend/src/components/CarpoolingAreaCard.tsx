@@ -1,31 +1,27 @@
+import Link from "next/link";
+
 type CarpoolingAreaCardProps = {
-  zipcode: number;
   city: string;
-  adress: string;
-  namePlace: string;
-  parkingType: string;
-  parkingBike: string;
-  sfr4G: string;
-  free4G: string;
-  orange4G: string;
-  bouygues4G: string;
-  geographic: string;
+  zipCode: string;
+  placeName: string;
+  geographicCoordinates: string;
 };
 
 export default function CarpoolingAreaCard(props: CarpoolingAreaCardProps) {
   return (
-    <div className="bg-white py-10 rounded-md cursor-pointer transition duration-300 ease-in-out hover:scale-105 shadow-md border flex flex-col items-center">
-      <div className="text-lg">{props.namePlace}</div>
-      <div className="text-lg">{props.zipcode}</div>
-      <div className="text-lg">{props.city}</div>
-      <div className="text-lg">{props.adress}</div>
-      <div className="text-lg">{props.geographic}</div>
-      <div className="text-lg">{props.parkingType}</div>
-      <div className="text-lg">{props.parkingBike}</div>
-      <div className="text-lg">{props.bouygues4G}</div>
-      <div className="text-lg">{props.free4G}</div>
-      <div className="text-lg">{props.sfr4G}</div>
-      <div className="text-lg">{props.orange4G}</div>
+    <div className="bg-white py-10 rounded-md shadow-md border flex flex-col items-center justify-between">
+      <div className="flex flex-col items-center">
+        <div className="text-lg">{props.city}</div>
+        <div className="text-lg">{props.zipCode}</div>
+        <div className="px-2 text-lg text-center">{props.placeName}</div>
+      </div>
+      <Link
+        href={`https://www.google.fr/maps/search/?api=1&query=${props.geographicCoordinates}`}
+      >
+        <button className="mt-4 px-4 pt-2 pb-[0.25rem] bg-green-400 text-lg rounded-md shadow-md transition duration-300 ease-in-out hover:scale-105">
+          Voir sur la carte
+        </button>
+      </Link>
     </div>
   );
 }
