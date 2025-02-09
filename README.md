@@ -50,7 +50,7 @@ SPRING_DATASOURCE_PASSWORD=password
 SPRING_DATASOURCE_DB=exempledb
 ```
 
-Ouvrez le répertoire api-rest avec un IDE(Eclipse, Intellij...) et lancer l'application ou en ligne de commande,
+Ouvrir le répertoire api-rest avec un IDE(Eclipse, Intellij...) et lancer l'application ou en ligne de commande,
 
 Placez vous dans le répertoire api-rest et tapez les commandes suivantes:
 ```
