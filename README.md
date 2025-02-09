@@ -18,6 +18,7 @@ Technologies:
 
 - Java 17
 - API Spring Boot
+- Postgresql
 
 ## Déploiement
 
