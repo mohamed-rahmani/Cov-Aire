@@ -29,6 +29,7 @@ Technologies:
 
 - AWS EC2
 - Docker
+- Vercel
 
 ## Démarrage
 
