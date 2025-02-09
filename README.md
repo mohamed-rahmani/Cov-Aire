@@ -4,6 +4,9 @@ Une application permettant de trouver toutes les aires de covoiturage en France.
 
 > covaire.vercel.app
 
+![image](https://github.com/user-attachments/assets/f1eae81e-0dcf-4ca8-b284-c2e10df738b8)
+
+
 ## Front-End
 
 Technologies:
