@@ -1,6 +1,6 @@
 # Cov'Aire
 
-Une application permettant de trouver toutes les aires de covoiturage en France.
+Une application web permettant de trouver toutes les aires de covoiturage en France.
 
 > covaire.vercel.app
 
