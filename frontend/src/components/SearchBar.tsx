@@ -42,13 +42,23 @@ const SearchBar: React.FC = () => {
         />
       </div>
 
-      {searchTerm && data && data.length > 0 && (
+      {searchTerm && data && (
         <ul className="absolute w-full bg-white border mt-1 rounded-lg shadow-md max-h-[90vh] overflow-y-auto scrollbar-thin">
-          {isLoading && <LoaderCircle className="animate-spin" />}
-          {error && <p className="text-red-500">Erreur : {error.message}</p>}
-          {data
-            .slice(0, 10) // On limite à 10 résultats, comme dans ton code
-            .map((area: CarpoolingArea, index: number) => (
+          {isLoading && <LoaderCircle className="animate-spin p-10" />}
+          {error && (
+            <p className="text-red-500 text-center p-10">
+              Erreur : {error.message}
+            </p>
+          )}
+
+          {data.length === 0 && (
+            <p className="text-gray-500 text-center p-10">
+              Aucun résultat trouvé
+            </p>
+          )}
+
+          {data.length > 0 &&
+            data.slice(0, 10).map((area: CarpoolingArea, index: number) => (
               <li
                 key={index}
                 className="flex items-center px-3 py-2 cursor-pointer hover:bg-gray-100"
