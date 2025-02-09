@@ -5,10 +5,7 @@ import com.covaire.api_rest.service.CarpoolingAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -65,5 +62,10 @@ public class CarpoolingAreaController {
     @GetMapping("/departements/{region}")
     public List<String> getAllDepartmentsByRegion(@PathVariable String region) {
         return service.getAllDepartmentsByRegion(region);
+    }
+
+    @GetMapping("/search/{keyword}")
+    public List<CarpoolingArea> getCarpoolingAreasByKeyword(@PathVariable String keyword) {
+        return service.getCarpoolingAreasByKeyword(keyword);
     }
 }
