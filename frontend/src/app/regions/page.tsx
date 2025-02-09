@@ -18,7 +18,11 @@ export default function Page() {
       <div className="px-6 py-6 text-[#898989]">Sélectionner une région</div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-6 py-2">
         {isLoading && <LoaderCircle className="spin-animation" />}
-        {error && <p className="text-red-500">Error: {error.message}</p>}
+        {error && (
+          <p className="text-red-500">
+            Erreur dans la récupération des données
+          </p>
+        )}
         {data &&
           data
             .filter(
