@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-white w-full rounded-2xl border border-gray-300 shadow-md p-4 mb-7 flex">
-      <div className="w-1/2 h-full flex flex-col justify-center items-start p-10">
-        <p className="text-5xl">
+      <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-start p-10">
+        <p className="max-sm:text-4xl text-5xl">
           Découvrez les aires de covoiturage{" "}
           <span className="relative inline-block">
             <span className="relative z-10">disponible</span>
@@ -24,7 +24,7 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      <div className="w-1/2 h-full flex justify-center items-center p-10">
+      <div className="w-1/2 h-full md:flex justify-center items-center p-10 hidden">
         <Image
           src={"/france.svg"}
           alt="France Map"

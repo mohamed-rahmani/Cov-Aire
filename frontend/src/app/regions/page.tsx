@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <div className="bg-white w-full rounded-2xl border border-gray-300 shadow-md mb-7">
       <div className="px-6 py-6 text-[#898989]">Sélectionner une région</div>
-      <div className="grid grid-cols-3 gap-5 px-6 py-2">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-6 py-2">
         {isLoading && <LoaderCircle className="spin-animation" />}
         {error && <p className="text-red-500">Error: {error.message}</p>}
         {data &&
