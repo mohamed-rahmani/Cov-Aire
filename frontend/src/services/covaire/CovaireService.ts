@@ -45,3 +45,20 @@ export const getCarpoolingAreasByDepartment = async (
   }
   return response.json();
 };
+
+export const getCarpoolingAreasByKeyword = async (
+  keyword: string,
+  options: RequestInit = {}
+) => {
+  const response = await fetch(
+    `http://localhost:8081/api/v1/carpooling-areas/search/${keyword}`,
+    {
+      headers: { "Content-Type": "application/json", ...options.headers },
+      ...options,
+    }
+  );
+  if (!response.ok) {
+    throw new Error(`Error: ${response.statusText}`);
+  }
+  return response.json();
+};

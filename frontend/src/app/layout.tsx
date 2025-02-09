@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="mx-auto flex min-h-screen max-w-6xl border-x border-[#e1e2e3] flex-col px-8 selection:bg-black selection:text-white">
-        <Header />
-        <main className="flex-1 flex">
-          <QueryClientProvider>{children}</QueryClientProvider>
-        </main>
+        <QueryClientProvider>
+          <Header />
+          <main className="flex-1 flex">{children}</main>
+        </QueryClientProvider>
       </body>
     </html>
   );

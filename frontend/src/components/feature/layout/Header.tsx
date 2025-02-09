@@ -30,7 +30,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="w-full md:mx-auto md:w-auto">
+        <div className="w-full md:mx-auto md:w-auto z-50">
           <SearchBar />
         </div>
 

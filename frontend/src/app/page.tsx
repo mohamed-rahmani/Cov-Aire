@@ -9,9 +9,8 @@ export default function Home() {
       <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-start p-10">
         <p className="max-sm:text-4xl text-5xl">
           Découvrez les aires de covoiturage{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10">disponible</span>
-            <span className="absolute left-0 bottom-0 w-full h-2 bg-green-400 z-0"></span>
+          <span className="inline-block">
+            <span className="border-b-green-400 border-b-8">disponible</span>
           </span>{" "}
           partout en France
         </p>
