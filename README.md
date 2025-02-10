@@ -40,6 +40,11 @@ Technologies:
 
 ### Côté front
 
+Placez un fichier .env dans le répertoire front-end:
+```
+NEXT_PUBLIC_API_URL=http://localhost:8081/api/v1/carpooling-areas
+```
+
 Placez vous dans le répertoire frontend et tapez les commandes suivantes:
 ```
 npm install
