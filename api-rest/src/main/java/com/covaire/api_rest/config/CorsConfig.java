@@ -14,7 +14,7 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:3000"));
+        config.setAllowedOrigins(List.of("http://localhost:3000", "https://covaire.vercel.app"));
         config.setAllowedMethods(List.of("GET"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
