@@ -1,5 +1,4 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-console.log("API_URL from env:", API_URL);
 
 export const getAllRegion = async (options: RequestInit = {}) => {
   const response = await fetch(`${API_URL}/regions`, {
